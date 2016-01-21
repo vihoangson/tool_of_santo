@@ -91,106 +91,109 @@ a.thumbnail {
 						</div>
 					</div>
 
+<?php 
 
-					<h2>Library</h2>
+$array = [
+	"The CodePlayer"=> [
+		"The CodePlayer",
+		"http://thecodeplayer.com/",
+		"thecodeplayer.png",
+	],
+	"Codecademy"=> [
+		"Codecademy",
+		"http://www.codecademy.com/#!/exercises/0",
+		"codecademy.png",
+	],
+	"Udacity"=> [
+		"Udacity",
+		"https://www.udacity.com/how-it-works",
+		"udacity.png",
+	],
+	"Code School"=> [
+		"Code School",
+		"https://www.codeschool.com/",
+		"Code School.png",
+	],
+	"Dash"=> [
+		"Dash",
+		"https://dash.generalassemb.ly/",
+		"dash.png",
+	],
+	"W3schools"=> [
+		"W3schools",
+		"http://www.w3schools.com/",
+		"w3schools.png",
+	],
+	"MIT OpenCourseWare"=> [
+		"MIT OpenCourseWare",
+		"http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/",
+		"mit.edu.png",
+	],
+	"Mozilla Developer Network"=> [
+		"Mozilla Developer Network",
+		"https://developer.mozilla.org/en-US/",
+		"Mozilla Developer Network.jpg",
+	],
+
+	"Coursera"=> [
+		"Coursera",
+		"https://www.coursera.org/",
+		"coursera.png",
+	],
+	"Khan Academy"=> [
+		"Khan Academy",
+		"https://www.khanacademy.org/cs/tutorials/programming-basics",
+		"khan.png",
+	],
+	"Learn Python the Hard Way"=> [
+		"Learn Python the Hard Way",
+		"http://learnpythonthehardway.org/",
+		"learnpython.png",
+	],
+	"HTML5 Rocks"=> [
+		"HTML5 Rocks",
+		"http://www.html5rocks.com/en/",
+		"html5rock.png",
+	]
+];
+$order = [
+"The CodePlayer",
+"Codecademy",
+"W3schools",
+"Code School",
+"HTML5 Rocks",
+"Mozilla Developer Network",
+"Learn Python the Hard Way",
+"Udacity",
+"Dash",
+"MIT OpenCourseWare",
+"Coursera",
+"Khan Academy",
+];
+
+ ?>
+
+
+
+ 
+					<h2>Education</h2>
 					<div class="row">
-
-						<div class="col-md-3 col-ele">
-							<a href="https://www.udacity.com/how-it-works" class="thumbnail" target="_blank">
-								<img src="http://placehold.it/300x300">
-							</a>
-							<div class="text-center"><h3>Udacity</h3></div>
-							<p><b>Note:</b> </p>
-						</div>
-
-						<div class="col-md-3 col-ele">
-							<a href="http://www.codecademy.com/#!/exercises/0" class="thumbnail" target="_blank">
-								<img src="http://placehold.it/300x300">
-							</a>
-							<div class="text-center"><h3>Codecademy</h3></div>
-							<p><b>Note:</b> </p>
-						</div>
-
-						<div class="col-md-3 col-ele">
-							<a href="https://www.codeschool.com/" class="thumbnail" target="_blank">
-								<img src="http://placehold.it/300x300">
-							</a>
-							<div class="text-center"><h3>Code School</h3></div>
-							<p><b>Note:</b> </p>
-						</div>
-
-						<div class="col-md-3 col-ele">
-							<a href="https://dash.generalassemb.ly/" class="thumbnail" target="_blank">
-								<img src="http://placehold.it/300x300">
-							</a>
-							<div class="text-center"><h3>Dash</h3></div>
-							<p><b>Note:</b> </p>
-						</div>
-
-						<div class="col-md-3 col-ele">
-							<a href="http://www.w3schools.com/" class="thumbnail" target="_blank">
-								<img src="http://placehold.it/300x300">
-							</a>
-							<div class="text-center"><h3>W3schools</h3></div>
-							<p><b>Note:</b> </p>
-						</div>
-
-						<div class="col-md-3 col-ele">
-							<a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/" class="thumbnail" target="_blank">
-								<img src="http://placehold.it/300x300">
-							</a>
-							<div class="text-center"><h3>MIT OpenCourseWare</h3></div>
-							<p><b>Note:</b> </p>
-						</div>
-
-						<div class="col-md-3 col-ele">
-							<a href="https://developer.mozilla.org/en-US/" class="thumbnail" target="_blank">
-								<img src="http://placehold.it/300x300">
-							</a>
-							<div class="text-center"><h3>Mozilla Developer Network</h3></div>
-							<p><b>Note:</b> </p>
-						</div>
-
-						<div class="col-md-3 col-ele">
-							<a href="http://thecodeplayer.com/" class="thumbnail" target="_blank">
-								<img src="http://placehold.it/300x300">
-							</a>
-							<div class="text-center"><h3>The CodePlayer</h3></div>
-							<p><b>Note:</b> </p>
-						</div>
-
-						<div class="col-md-3 col-ele">
-							<a href="https://www.coursera.org/" class="thumbnail" target="_blank">
-								<img src="http://placehold.it/300x300">
-							</a>
-							<div class="text-center"><h3>Coursera</h3></div>
-							<p><b>Note:</b> </p>
-						</div>
-
-						<div class="col-md-3 col-ele">
-							<a href="https://www.khanacademy.org/cs/tutorials/programming-basics" class="thumbnail" target="_blank">
-								<img src="http://placehold.it/300x300">
-							</a>
-							<div class="text-center"><h3>Khan Academy</h3></div>
-							<p><b>Note:</b> </p>
-						</div>
-
-						<div class="col-md-3 col-ele">
-							<a href="http://learnpythonthehardway.org/" class="thumbnail" target="_blank">
-								<img src="http://placehold.it/300x300">
-							</a>
-							<div class="text-center"><h3>Learn Python the Hard Way</h3></div>
-							<p><b>Note:</b> </p>
-						</div>
-
-						<div class="col-md-3 col-ele">
-							<a href="http://www.html5rocks.com/en/" class="thumbnail" target="_blank">
-								<img src="http://placehold.it/300x300">
-							</a>
-							<div class="text-center"><h3>HTML5 Rocks</h3></div>
-							<p><b>Note:</b> </p>
-						</div>
+<?php
+foreach ($order as $key => $value) {
+	$value=$array[$value]
+	?>
+		<div class="col-md-3 col-ele">
+			<a href="<?= $value[1]; ?>" class="thumbnail" target="_blank">
+				<img src="img/<?= $value[2]; ?>">
+			</a>
+			<div class="text-center"><h3><?= $value[0]; ?></h3></div>
+			<p><b>Note:</b> </p>
+		</div>
+	<?php
+}
+ ?>
 					</div>
+
 
 
 				

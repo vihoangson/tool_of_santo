@@ -30,11 +30,9 @@
 			});
 			group.each(function() { $(this).height(tallest); });
 		}
-
-		$(document).ready(function() {
+		$(window).load(function(){
 			equalHeight($(".thumbnail"));
 			equalHeight($(".col-ele"));
-			
 		});
 	</script>
 </head>
@@ -92,46 +90,46 @@
 					<?php
 							$array_website = [
 								"The CodePlayer"=> [
-									"name_web"=>"The CodePlayer",
-									"link_web"=>"http://thecodeplayer.com/",
-									"img_preview"=>"thecodeplayer.png",
-									"note"=>"Đây là một trang web đáng xem",
+									"name_web"    =>"The CodePlayer",
+									"link_web"    =>"http://thecodeplayer.com/",
+									"img_preview" =>"thecodeplayer.png",
+									"note"        =>"Đây là một trang web đáng xem",
 								],
 								"Codecademy"=> [
-									"name_web"=>"Codecademy",
-									"link_web"=>"http://www.codecademy.com/#!/exercises/0",
-									"img_preview"=>"codecademy.png",
-									"note"=>"",
+									"name_web"    =>"Codecademy",
+									"link_web"    =>"http://www.codecademy.com/#!/exercises/0",
+									"img_preview" =>"codecademy.png",
+									"note"        =>"",
 								],
 								"Udacity"=> [
-									"name_web"=>"Udacity",
-									"link_web"=>"https://www.udacity.com/how-it-works",
-									"img_preview"=>"udacity.png",
-									"note"=>"",
+									"name_web"    =>"Udacity",
+									"link_web"    =>"https://www.udacity.com/how-it-works",
+									"img_preview" =>"udacity.png",
+									"note"        =>"",
 								],
 								"Code School"=> [
-									"name_web"=>"Code School",
-									"link_web"=>"https://www.codeschool.com/",
-									"img_preview"=>"Code School.png",
-									"note"=>"",
+									"name_web"    =>"Code School",
+									"link_web"    =>"https://www.codeschool.com/",
+									"img_preview" =>"Code School.png",
+									"note"        =>"",
 								],
 								"Dash"=> [
-									"name_web"=>"Dash",
-									"link_web"=>"https://dash.generalassemb.ly/",
-									"img_preview"=>"dash.png",
-									"note"=>"",
+									"name_web"    =>"Dash",
+									"link_web"    =>"https://dash.generalassemb.ly/",
+									"img_preview" =>"dash.png",
+									"note"        =>"",
 								],
 								"W3schools"=> [
-									"name_web"=>"W3schools",
-									"link_web"=>"http://www.w3schools.com/",
-									"img_preview"=>"w3schools.png",
-									"note"=>"",
+									"name_web"    =>"W3schools",
+									"link_web"    =>"http://www.w3schools.com/",
+									"img_preview" =>"w3schools.png",
+									"note"        =>"",
 								],
 								"MIT OpenCourseWare"=> [
-									"name_web"=>"MIT OpenCourseWare",
-									"link_web"=>"http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/",
-									"img_preview"=>"mit.edu.png",
-									"note"=>"",
+									"name_web"    =>"MIT OpenCourseWare",
+									"link_web"    =>"http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/",
+									"img_preview" =>"mit.edu.png",
+									"note"        =>"",
 								],
 								"Mozilla Developer Network"=> [
 									"name_web"=>"Mozilla Developer Network",

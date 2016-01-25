@@ -22,15 +22,24 @@
 				</div>
 				<div class="panel-body">
 					<h2>Chào bạn</h2>
-					<p>Đây là những công cụ của tôi</p>
+
+					<p>Câu nói <b>“If you’re not learning, you’re dying”</b> của Bill Gates là câu hói đặc biệt đúng trong thời đại công nghệ thông tin phát triển như hiện nay, vì nếu bạn không học hỏi và phát triển, bạn chết chắc!</p>
+
+					<hr>
+
+					<div class="text-center"><a href="/Utinity/Quote.php" class="btn btn-primary">Quote</a></div>
+
+					<!-- <p>Đây là những công cụ của tôi</p> -->
 
 
-<h2>Script chạy tất cả các link có trong page</h2>
-<pre>
-$("a").each(function(){
-	window.open($(this).attr("href"),"_blank");
-});
-</pre>
+<!--
+	<h2>Script chạy tất cả các link có trong page</h2>
+	<pre>
+	$("a").each(function(){
+		window.open($(this).attr("href"),"_blank");
+	});
+	</pre>
+-->
 				</div>
 
 				<!-- END panel-body -->

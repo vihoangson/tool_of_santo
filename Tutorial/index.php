@@ -34,6 +34,11 @@
 			equalHeight($(".thumbnail"));
 			equalHeight($(".col-ele"));
 		});
+		$(document).ready(function() {
+			$(".title-trick").each(function(index, el) {
+				$(".summary").append("<h5><a href='#"+$(this).attr("id")+"'>"+$(this).text()+"</a></h5>");
+			});
+		});
 	</script>
 </head>
 <body>
@@ -46,16 +51,35 @@
 				</div>
 				<div class="panel-body">
 					<h2>Tutorial</h2>
+					<h3>Summary</h3>
+					<div class="summary"></div>
 					<div class="row">
+						<!-- ============ ============ ============  ============ ============ ============ -->
 						<hr>
-						<h2 class="text-center">Hướng dẫn: Multi cursor</h2>
+						<h2 class="text-center title-trick" id="01">Hướng dẫn: Multi cursor</h2>
 						<p class="text-center"><img style="width:100%;" src="files/multi_cursor.gif"></p>
+						<!-- ============ ============ ============  ============ ============ ============ -->
 						<hr>
-						<h2 class="text-center">Hướng dẫn: Package docblockr</h2>
+						<h2 class="text-center title-trick" id="02">Hướng dẫn: Package docblockr</h2>
 						<p class="text-center"><img style="width:100%;" src="files/docblockr.gif"></p>
+						<!-- ============ ============ ============  ============ ============ ============ -->
 						<hr>
-						<h2 class="text-center">Hướng dẫn: Package Insert nums</h2>
+						<h2 class="text-center title-trick" id="03">Hướng dẫn: Package Insert nums</h2>
 						<p class="text-center"><img style="width:100%;" src="files/insert_nums.gif"></p>
+						<!-- ============ ============ ============  ============ ============ ============ -->
+						<hr>
+						<h2 class="text-center title-trick" id="04">Max width - CSS3</h2>
+<h3> Code CSS</h3>
+<pre>
+	@media screen and (max-width:768px){
+		.test-size{
+			display:none;
+		}
+	}
+</pre>
+<h3>Preview</h3>
+						<p class="text-center"><img style="width:100%;" src="files/CSS3-max-width.gif"></p>
+
 					</div>
 <p><a href="\\10.11.8.118\www\nabtesco\application\controllers\Library.php">\\10.11.8.118\www\nabtesco\application\controllers\Library.php</a></p>
 				<!-- END panel-body -->

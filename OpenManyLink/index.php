@@ -53,37 +53,39 @@
 		<!-- Bootstrap JavaScript -->
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		<script>
-		load_store();
-		$("#input-link_btn").click(function(){
-			localStorage[$.now()]=$("#input-link").val();
-			var links = $("#input-link").val().split("\n");
-			$.each(links, function(index, val) {
-				if(val.match(/^http/)){
-					window.open(val,"_blank");
-				}
-			});
+			// Khởi tạo
 			load_store();
-		});
-
-		$(document).on('click',".revert_box",function(){
-			key_s = $(this).data("time");
-			$("textarea").val(localStorage[key_s]);
-		});
-		$("#remove_session").click(function(){
-			localStorage.clear();
-			load_store();
-		});
-
-		function load_store(){
-			$("#storebox").html("");
-			$.each(localStorage, function(index, val) {
-				var int_index = parseInt(index);
-				var now=moment($.now());
-				var then=moment(int_index);
-				time_c = moment.duration(now.diff(then)).humanize();
-				$("#storebox").prepend("<div><a href='javascript:void(0)' class='revert_box' data-time='"+index+"'>Session in "+time_c+" ago</a></div>");
+			$("#input-link_btn").click(function(){
+				localStorage[$.now()]=$("#input-link").val();
+				var links = $("#input-link").val().split("\n");
+				$.each(links, function(index, val) {
+					if(val.match(/^http/)){
+						window.open(val,"_blank");
+					}
+				});
+				load_store();
 			});
-		}
+
+			$(document).on('click',".revert_box",function(){
+				key_s = $(this).data("time");
+				$("textarea").val(localStorage[key_s]);
+			});
+
+			$("#remove_session").click(function(){
+				localStorage.clear();
+				load_store();
+			});
+
+			function load_store(){
+				$("#storebox").html("");
+				$.each(localStorage, function(index, val) {
+					var int_index = parseInt(index);
+					var now=moment($.now());
+					var then=moment(int_index);
+					time_c = moment.duration(now.diff(then)).humanize();
+					$("#storebox").prepend("<div><a href='javascript:void(0)' class='revert_box' data-time='"+index+"'>Session in "+time_c+" ago</a></div>");
+				});
+			}
 
 		</script>
 	</body>

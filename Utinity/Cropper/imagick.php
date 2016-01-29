@@ -31,6 +31,6 @@
 	// Crop hình theo thông số truyền vào
 	$image->cropImage(  $width ,  $height ,  $x ,  $y );
 	// Lưu file xuống
-	$image->writeImage("xxx".time().".png");
+	$image->writeImage("img_output/xxx".time().".png");
 
 ?>

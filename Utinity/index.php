@@ -75,6 +75,13 @@
 							<div class="text-center"><h3>Jsfiddle</h3></div>
 							<p><b>Note:</b> Test thử Javascript HTML</p>
 						</div>
+						<div class="col-md-3 col-ele">
+							<a href="http://codepen.io/" class="thumbnail" target="_blank">
+								<img src="img/Codepen.png">
+							</a>
+							<div class="text-center"><h3>Codepen</h3></div>
+							<p><b>Note:</b> Tạo và chia sẻ các script</p>
+						</div>
 					</div>
 
 					<h2>Library</h2>
@@ -86,6 +93,14 @@
 							<div class="text-center"><h3>Simple html dom</h3></div>
 							<p><b>Note:</b> </p>
 						</div>
+						<div class="col-md-3 col-ele">
+							<a href="http://jade-lang.com/" class="thumbnail" target="_blank">
+								<img src="img/jade_lang.png">
+							</a>
+							<div class="text-center"><h3>Jade HTML lang template</h3></div>
+							<p><b>Note:</b> </p>
+						</div>
+						
 					</div>
 					<?php
 							$array_website = [

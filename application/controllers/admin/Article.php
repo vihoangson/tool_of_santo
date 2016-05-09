@@ -24,10 +24,10 @@ class Article extends Backend {
 		if($id){
 			$rs = $this->article_model->get($id);
 		}
-		$this->twig->display("input_article",compact('rs'));
+		$this->twig->display("admin/input_article",compact('rs'));
 	}
 
-	public function save($id=null){
+	private function save($id=null){
 		if($this->input->post()){
 			$article_title = $this->input->post('article_title');
 			$article_content = $this->input->post('article_content');
@@ -46,6 +46,7 @@ class Article extends Backend {
 				$this->article_model->where(["id"=>(int)$id]);
 				$this->article_model->update($params);
 			}
+			redirect('/admin/article','refresh');
 		}
 	}
 

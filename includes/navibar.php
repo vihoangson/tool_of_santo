@@ -15,10 +15,10 @@
 	<div class="collapse navbar-collapse navbar-ex1-collapse">
 		<ul class="nav navbar-nav">
 			<!-- <li class="active"><a href="#">Trang chủ</a></li> -->
-			<li><a href="http://tool.santo.cba/OpenManyLink">OpenManyLink</a></li>
-			<li><a href="http://tool.santo.cba/BootstrapCDN">BootstrapCDN</a></li>
-			<li><a href="http://tool.santo.cba/Utinity">Utinity</a></li>
-			<li><a href="http://tool.santo.cba/Tutorial">Tutorial</a></li>
+			<li><a href="/OpenManyLink">OpenManyLink</a></li>
+			<li><a href="/BootstrapCDN">BootstrapCDN</a></li>
+			<li><a href="/Utinity">Utinity</a></li>
+			<li><a href="/Tutorial">Tutorial</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 			<li><a href="#">Link</a></li>

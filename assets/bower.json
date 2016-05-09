@@ -1,0 +1,17 @@
+{
+  "name": "tool",
+  "homepage": "https://github.com/vihoangson/tool_of_santo",
+  "authors": [
+    "Son Vi Hoang <hoang_son@lampart-vn.com>"
+  ],
+  "description": "vihoangson",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,39 @@
+{% extends 'layout/frontend.twig' %}
+
+{% block title_page %}
+Chào mừng các bạn
+{% endblock %}
+
+{% block custome_css %}
+<link rel="stylesheet" href="/assets/bower_components/summernote/dist/summernote.css">
+{% endblock %}
+
+{% block content_page %}
+	<form action="" method="POST" role="form">
+		<legend>Form title</legend>
+		<div class="form-group">
+			<label for="">article_title</label>
+			<input type="text" name="article_title" class="form-control" id="" placeholder="Input field" value="{{rs.article_title}}">
+		</div>
+		<div class="form-group">
+			<label for="">article_content</label>
+			<div id="summernote">{{rs.article_content|raw}}</div>
+			<textarea name="article_content" style="display:none"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="">article_tags</label>
+			<input type="text" name="article_tags" class="form-control" id="" placeholder="Input field" value="{{rs.article_tags}}">
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+{% endblock %}
+
+{% block custome_js %}
+	<script src="/assets/bower_components/summernote/dist/summernote.min.js"></script>
+	<script>
+		$("#summernote").summernote();
+		$("form").submit(function(event) {
+			$('[name="article_content"]').html($("#summernote").summernote("code"));
+		});
+	</script>
+{% endblock %}

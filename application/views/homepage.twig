@@ -1,0 +1,25 @@
+{% extends 'layout/frontend.twig' %}
+
+{% block title_page %}
+Chào mừng các bạn
+{% endblock %}
+
+{% block custome_css %}
+{% endblock %}
+
+{% block content_page %}
+
+<a class="btn btn-info" href="/homepage/input"> Create new</a>
+	{% for item in rs %}
+	    <h2>{{item.article_title}}</h2>
+	    <h4>{{item.article_content|raw}}</h4>
+	    <h6>{{item.article_tags}}</h6>
+	    <hr>
+	{% endfor %}
+{% endblock %}
+
+{% block custome_js %}
+<script>
+
+</script>
+{% endblock %}

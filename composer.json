@@ -1,5 +1,5 @@
 {
     "require": {
-        "silverstripe/blog": "^2.3"
+        "kenjis/codeigniter-ss-twig": "^0.2.0"
     }
 }

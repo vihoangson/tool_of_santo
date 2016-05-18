@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class ShowGist extends MY_Controller {
 
+	public function __construct(){
+		parent::__construct();
+		$this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
+	}
+
 	public function index()
 	{
 		//============ ============  ============ ============
@@ -10,18 +15,37 @@ class ShowGist extends MY_Controller {
 		//  API gist.github.com
 		//============ ============  ============ ============
 
-		// 
-		$this->gist_user();
+		//
+		//$this->gist_user();
 
-		// 
-		$this->gist_detail_raw();
+		//
+		//$this->gist_detail_raw();
+
+		$this->show_all_gist_by_username();
 	}
 
-	private function gist_user(){
+	public function show_all_gist_by_username(){
+		if($this->input->get('username')){
+			$gists = $this->gist_user($this->input->get('username'));
+		}
+		$this->twig->display("gist_user",compact("gists"));
+	}
+
+	private function gist_user($username){
 		// Lấy list của 1 user
-		$value = "https://api.github.com/users/vihoangson/gists";
-		$result = $this->curl_get($value);
-		$m = json_decode($result);
+		$value = "https://api.github.com/users/".$username."/gists";
+		//============ ============  ============  ============ 
+		// Using cache variable $result in 5 minute
+		//
+		if ( ! $result = $this->cache->get('result')){
+			$result = $this->curl_get($value);
+			// Save into the cache for 5 minutes
+			$this->cache->save('result', $result, 300);
+		}
+		//
+		//============ ============  ============  ============ 
+		$m = json_decode($result,true);
+		return $m;
 		?>
 		<pre>
 			<?php var_dump($m); ?>

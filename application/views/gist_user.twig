@@ -1,0 +1,40 @@
+{% extends 'layout/frontend.twig' %}
+
+{% block title_page %}
+Chào mừng các bạn
+{% endblock %}
+
+{% block custome_css %}
+{% endblock %}
+
+{% block content_page %}
+	{% if gists %}
+		<div class="well">
+			{% for item in gists %}
+				{% for item2 in item.files %}
+					<h3><a target="_blank" href="{{item2.raw_url}}">{{item2.filename}}</a></h3>
+					<!-- <pre>{{dump(item2)}}</pre> -->
+				{% endfor %}
+			{% endfor %}
+		</div>
+		<hr>
+	{% endif %}
+
+	<form action="" method="GET" role="form">
+		<legend>Form title</legend>
+
+		<div class="form-group">
+			<label for="">username</label>
+			<input name="username" type="text" class="form-control" id="" placeholder="Input field">
+		</div>
+
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+
+{% endblock %}
+
+{% block custome_js %}
+<script>
+
+</script>
+{% endblock %}

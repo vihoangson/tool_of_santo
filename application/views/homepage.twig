@@ -8,8 +8,6 @@ Chào mừng các bạn
 {% endblock %}
 
 {% block content_page %}
-
-<a class="btn btn-info" href="/homepage/input"> Create new</a>
 	{% for item in rs %}
 	    <h2>{{item.article_title}}</h2>
 	    <h4>{{item.article_content|raw}}</h4>

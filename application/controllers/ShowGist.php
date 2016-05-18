@@ -37,14 +37,14 @@ class ShowGist extends MY_Controller {
 		//============ ============  ============  ============ 
 		// Using cache variable $result in 5 minute
 		//
-		if ( ! $result = $this->cache->get('result')){
-			$result = $this->curl_get($value);
+		if ( ! ${"result_".$username} = $this->cache->get("result_".$username)){
+			${"result_".$username} = $this->curl_get($value);
 			// Save into the cache for 5 minutes
-			$this->cache->save('result', $result, 300);
+			$this->cache->save("result_".$username, ${"result_".$username}, 300);
 		}
 		//
 		//============ ============  ============  ============ 
-		$m = json_decode($result,true);
+		$m = json_decode(${"result_".$username},true);
 		return $m;
 		?>
 		<pre>

@@ -9,7 +9,7 @@ Chào mừng các bạn
 {% endblock %}
 
 {% block content_page %}
-	<form action="" method="POST" role="form">
+	<form action="" method="POST" role="form" id="form-cm">
 		<legend>Form title</legend>
 		<div class="form-group">
 			<label for="">article_title</label>
@@ -24,15 +24,36 @@ Chào mừng các bạn
 			<label for="">article_tags</label>
 			<input type="text" name="article_tags" class="form-control" id="" placeholder="Input field" value="{{rs.article_tags}}">
 		</div>
-		<button type="submit" class="btn btn-primary">Submit</button>
+		<input type="hidden" name="type_save" value="">
+		<button type="button" class="btn btn-primary delete-btn">Delete</button> <button type="button" class="btn btn-primary draf-btn">Draf</button> <button type="submit" class="btn btn-primary">Submit</button>
 	</form>
 {% endblock %}
 
 {% block custome_js %}
 	<script src="/assets/bower_components/summernote/dist/summernote.min.js"></script>
 	<script>
+	
+		$(".delete-btn").click(function(event) {
+			// TODO: Xử lý xóa = ajax
+		}
+		$(".draf-btn").click(function(event) {
+			if($("[name='article_title']").val() == "")
+				return;
+			$("[name='type_save']").val("draf");
+			$("#form-cm").ajaxForm({
+				url:"/admin/article/save_draf",
+				beforesend:function(){
+				},
+				data:{
+				},
+				success:function(){
+					$("[name='type_save']").val("");
+				}
+			}).submit();
+			console.log($.now());
+		});
 		$("#summernote").summernote();
-		$("form").submit(function(event) {
+		$("#form-cm").submit(function(event) {
 			$('[name="article_content"]').html($("#summernote").summernote("code"));
 		});
 	</script>

@@ -33,20 +33,23 @@ Chào mừng các bạn
 	<script src="/assets/bower_components/summernote/dist/summernote.min.js"></script>
 	<script>
 	
-		$(".delete-btn").click(function(event) {
-			// TODO: Xử lý xóa = ajax
-		}
+		// $(".delete-btn").click(function(event) {
+		// 	// TODO: Xử lý xóa = ajax
+		// }
 		$(".draf-btn").click(function(event) {
-			if($("[name='article_title']").val() == "")
-				return;
+			if($("[name='article_title']").val() == "")	return;
 			$("[name='type_save']").val("draf");
+			if(!localStorage["draf_id"]){
+				localStorage["draf_id"] = null;
+			}
 			$("#form-cm").ajaxForm({
-				url:"/admin/article/save_draf",
+				url:"/admin/article/save_draf/" + localStorage["draf_id"],
 				beforesend:function(){
 				},
 				data:{
 				},
-				success:function(){
+				success:function(data){
+					localStorage["draf_id"] = data.id;
 					$("[name='type_save']").val("");
 				}
 			}).submit();

@@ -3,6 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Article extends Backend {
 
+	private $draf;
+
 	public function index()
 	{
 		$rs = $this->article_model->get_all();
@@ -47,27 +49,11 @@ class Article extends Backend {
 	 * [save_draf description]
 	 * @return [type] [description]
 	 */
-	private function save_draf(){
-		// TODO: Xửa lý lưu file nháp
-		if($this->input->post()){
-			$article_title   = $this->input->post('article_title');
-			$article_content = $this->input->post('article_content');
-			$article_tags    = $this->input->post('article_tags');
-			if(!$article_title){
-				return false;
-			}
-			$params = [
-				"article_title"   =>$article_title,
-				"article_content" =>$article_content,
-				"article_tags"    =>$article_tags,
-			];
-			if(!$id){
-				return $this->article_model->insert($params);
-			}else{
-				$this->article_model->where(["id"=>(int)$id]);
-				return $this->article_model->update($params);
-			}
-		}
+	public function save_draf ($id_input){
+		$this->draf = true;
+		header('Content-Type: application/json');
+		$id = $this->save($id_input);
+		echo json_encode(["id"=>$id]);
 	}
 
 	/**
@@ -88,6 +74,11 @@ class Article extends Backend {
 				"article_content" =>$article_content,
 				"article_tags"    =>$article_tags,
 			];
+
+			if($this->draf){
+				$params["draf"] = 1;
+			}
+
 			if(!$id){
 				return $this->article_model->insert($params);
 			}else{
